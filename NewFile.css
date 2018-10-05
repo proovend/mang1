@@ -1,8 +1,27 @@
 
 body{
 	font-style:italic;
-	color:
+	
+	
 }
 span{
 	 text-decoration:underline;
 }
+.Blocks{
+	width:50px;
+	height:50px;
+	background-color: blue;
+}
+.container{
+	display: grid;
+	grid-gap: 3px;
+	grid-template: reapeat(2, 1fr)  / 100px 100px;
+	justfy-content: center;
+	aling-items: center;
+	
+	
+}
+.test {
+	background-color: #89ff77;
+	
+	} 
