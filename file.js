@@ -1,4 +1,4 @@
-var colors = [ "red", "green", "blue", "yellow","black","red" ];
+var colors = [ "red", "green", "blue", "yellow", "black", "red" ];
 let index = 0;
 console
 		.log("\
@@ -10,26 +10,45 @@ console
  yyyyyyyyyyyyyyyyyyyyyyyyyyyyy\
  \
 hello my name is jeff");
-    let not2 =false;
-document.getElementById("jeff2").onclick = function(not2) {
-	if (not2 ){
-		
-		
-		let notswitch =
-			setInterval(function() {
-				funca(number1);
-				number1++;
-				if (number1 == 6){
-					number1 = 0;
-				}
-				
-				
-			}, 500);
+var not2 = true;
+var notSwitch;
+function switchRgb(notSwitch, not2) {
+	console.info(' 15: ' + not2);
+	if (not2) {
+
+		notSwitch = setInterval(function() {
+			funca(number1);
+			number1++;
+			if (number1 == 6) {
+				number1 = 0;
+			}
+
+		}, 500);
+		not2 = true;
+	} else {
+
+		clearInterval(notSwitch);
 		not2 = false;
 	}
-	else {
-		
-		clearInterval (notswitch);
+
+}
+document.getElementById("button").onclick = function() {
+	// switchRgb(notSwitch, not2);
+	if (not2) {
+
+		notSwitch = setInterval(function() {
+			funca(number1);
+			number1++;
+			if (number1 == 6) {
+				number1 = 0;
+			}
+
+		}, 500);
+
+		not2 = false;
+	} else {
+		clearInterval(notSwitch);
+		document.querySelector("body").style.backgroundColor = "white";
 		not2 = true;
 	}
 }
@@ -47,7 +66,7 @@ var number = 0;
 function doSomething(number) {
 	let variable1 = number;
 	return function() {
-		console.info(' 48: ' + variable1);
+		// console.info(' 48: ' + variable1);
 		variable1++;
 	}();
 
@@ -55,21 +74,20 @@ function doSomething(number) {
 doSomething(4);
 
 let interval = window.setInterval(function(number) {
-	console.info(' 56: ' + number);
-	doSomething(number);
+	// console.info(' 56: ' + number);
 	number++;
 }, 500);
 function callback(a, b) {
 	return function() {
-		console.log('sum = ', (a + b));
+		// console.log('sum = ', (a + b));
 	}()
 }
 
 var x = 1, y = 2;
 function funca(a) {
-	console.info(a);
+	// console.info(a);
 	document.querySelector("body").style.backgroundColor = colors[a];
+	clearInterval(notSwitch);
 
 }
 var number1 = 0;
-

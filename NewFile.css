@@ -11,15 +11,17 @@ span{
 	width:50px;
 	height:50px;
 	background-color: blue;
+	top: 50px; right: 70px;
+	position: absolute;
 }
 .container{
 	display: grid;
 	grid-gap: 3px;
-	grid-template: reapeat(2, 1fr)  / 100px 100px;
+	grid-template: repeat(2, 1fr)  / 100px 100px;
 	justfy-content: center;
 	aling-items: center;
 	
-	
+	position: ab
 }
 .test {
 	background-color: #89ff77;
